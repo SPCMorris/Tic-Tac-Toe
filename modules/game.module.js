@@ -1,26 +1,21 @@
 const GameController = (function() {
   const gameAction = $(".gameBoard div .row div"),
-        board = {
-          1: null, 
-          2: null, 
-          3: null, 
-          4: null, 
-          5: null, 
-          6: null, 
-          7: null, 
-          8: null, 
-          9: null
-        },
+        board = [
+          [null, null, null],
+          [null, null, null],
+          [null, null, null]
+        ],
         playerPos = [],
         computerPos = [];
 
   let turn = 0;
 
   const move = (id, type) => {
-    board[id] = type;
-    $("#"+id).text(type);
-    if(type === "X") { playerPos.push(id) }
-    else { computerPos.push(id) }
+    let index = Number(id);
+    board[index] = type;
+    $("#"+index).text(type);
+    if(type === "X") { playerPos.push(index) }
+    else { computerPos.push(index) }
     turn+= 2;
   };
 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" />
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+  <title>Tic Tac Toe: Ryan's Style</title>
+</head>
+<body>
+    <div class="container">
+      <h1 class="center-align">Click to start the game!</h1>
+
+      <div class="gameBoard row">
+        <div class="col s9 offset-s1">
+          <div class="row" style="margin: 0;">
+            <div id="1" class="col s2 offset-s3">t</div>
+            <div id="2" class="col s2" style="margin-left: 2%;margin-right: 2%">t</div>
+            <div id="3" class="col s2 ">t</div>
+          </div>
+          <div class="row" style="margin: 0;">
+            <div id="4" class="col s2 offset-s3">i</div>
+            <div id="5" class="col s2" style="margin-left: 2%;margin-right: 2%">a</div>
+            <div id="6" class="col s2">o</div>
+          </div>
+          <div class="row" style="margin: 0;">
+            <div id="7" class="col s2 offset-s3">c</div>
+            <div id="8" class="col s2" style="margin-left: 2%;margin-right: 2%">c</div>
+            <div id="9" class="col s2">e</div>
+          </div>     
+        </div>
+      </div>
+
+    </div>
+  <!-- jQuery CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- Modules -->
+  <script type="text/javascript" src="game.module.js"></script>
+  <script type="text/javascript" src="computer.module.js"></script>
+  <script type="text/javascript" src="player.module.js"></script>
+  <!-- Initiate Game -->
+  <script type="text/javascript">
+    $(document).ready( () => {
+      GameController.gameAction.click(PlayerController.playerSelection);
+    });
+  </script>
+</body>
+</html>
